@@ -1,0 +1,54 @@
+#Entrada de dados -> tudo que o usuário consegue digitar
+#Onde ficam armazenados? Na caixinha das variáveis
+#Comando para entrada de dados: 
+nome= input("Digite seu nome: ")
+nascimento = input ("Qual seu ano de nascimento?")
+
+#crlt+f5 => roda o código
+#limpar a tela de baixo: cls
+#verificar versão: py--version
+#Crlt+a => seleciona tudo
+
+#Melhorarando a forma como os dados são apresentados -> concatenação -> ;
+print("Nome:", nome)
+print("Idade:", nascimento)
+print("Email:", email)
+print("nome:", nome, ". Idade:", nascimento, ". email:", email)
+
+
+#Tratamento input/output
+a = int(input("Digite um número:"))  #int=>  numero inteiro -> converte o texto para número
+print (a+5)
+
+#Casting -> conversão de tipos de dados
+  #int() -> converte dados do tipo string ou floats para inteiros
+  #float() -> converte dados do tipo inteiro ou string para números com casas decimais
+  #str() -> converte dados do tipo decimais ou inteiros para texto
+
+#Operadoradores básicos lógicos
+#Categorias:
+#1: Aritméticos
+  # + -> adição
+  # - -> subtração
+  # * -> multiplicação
+  # / -> divisão
+  # % módulo
+  # ** potencia
+  # sqtr() raiz
+  # importar biblioteca => from cmat import sqrt
+#2: Relacionais -> comparação entre elementos
+  # > < >= <=  -> maior e menor = chevron
+  # == igual
+  #  != diferente
+  # === identico
+#3: Lógicos
+  # ! -> não
+  # && -> e
+  # || -> ou
+
+MAIORIDADE = 18
+ idade = int(input("Qual a sua idade:"))
+if idade < MAIORIDADE:
+    print("Menor de idade")
+
+#Conceituando pacotes e bibliotecas
