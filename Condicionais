@@ -1,0 +1,43 @@
+#Condicionais
+MAIORIDADE = 18
+idade = int(input("Qual a sua idade:")) 
+if idade < MAIORIDADE:
+    print("Menor de idade")  #-> indentação: falta ou excesso de espaço
+else:
+    print("É maior de idade")
+
+#elif -> possibilidade extra, não tem qtd max de condições 
+MAIORIDADE = 18
+idade = int(input("Qual a sua idade:"))
+if idade < MAIORIDADE:
+    print("Menor de idade")
+elif (idade == MAIORIDADE):
+    print("é guerreiro jedi")
+else:
+    print("É maior de idade")
+
+#Ternários -> deixar o código mais sucinto possível
+idade = int(input("Qual sua idade:"))
+print("É MAIOR") if idade >= 18 else print("É MENOR")
+
+#Switch e case -> caso
+
+a = "Márcio"
+match a:
+    case "Antonio":
+        print("Não é Márcio")
+    case "Pedro":
+        print ("Não é Antonio e nem márcio, é pedro")
+    case "Márcio":
+        print("Achou Márcio")
+        #ou sobrenome = input("Digite seu sobrenome:")
+
+#Teste prático
+anoNasc = int(input("Digite seu ano de nascimento:"))
+anoAtual = int(input("Digite o ano atual: "))
+idade = anoAtual - anoNasc
+if idade >= 18:
+    print("Digite o título")
+else:
+    print("Digite documento de responsável")
+
