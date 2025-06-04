@@ -1,0 +1,16 @@
+#1:Intalação do programa localmente no computado pelo site oficial:https://www.python.org/downloads/
+#2: Intalação da IDE (Integrated Development Environment)  -> code.visualstudio
+#3: Pela IDE instalar Python for windows -> pesquisar 
+
+
+#Arquitetura da programação
+idade = 20
+idade = 30
+#variaavel idade assume valor 20
+#variavel idade assume valor 30, removendo o valor 20
+#O valor 20 perde-se definitivamente
+
+#Regras básicas
+#1: variaveis nao podem iniciar com numeros
+#2: variaveis nao podem ter espaços
+#3: variaveis nao podem ter caracteres especiais (!, @, #, _)
