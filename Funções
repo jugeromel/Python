@@ -1,0 +1,55 @@
+#funções recursivas
+def soma():  #define a função soma
+  txt = "imprimindo resultado com variável"
+  return txt
+print(soma())
+
+
+#2
+def soma(a,b):  
+  c = a+b
+  return c
+print(soma(4,9))
+
+#3
+def soma(a,b,d):  
+  c = a+b+d
+  if c%2 ==0:
+    return "par"
+  else:
+    return "impar"
+print(soma(4,2,10))
+
+#funções nativa
+abs(): retorna o valor absoluto de um numero
+numero = -15
+print(abs(numero))  # Saída: 15
+
+pow(): realiza cálculos de potencia
+print(pow(2, 3))   # 2³ = 8
+print(pow(5, 2))   # 5² = 25
+print(pow(3, 3, 5)) # (3³) % 5 = 27 % 5 = 2
+
+next(): retorna o proximo elemnto de uma lista iterativa
+lista = ['maçã', 'banana', 'laranja']
+iterador = iter(lista)
+
+print(next(iterador))  # Saída: maçã
+print(next(iterador))  # Saída: banana
+print(next(iterador))  # Saída: laranja
+# Se chamar mais uma vez: erro StopIteration
+print(next(iterador, "Fim da lista"))  # Saída: Fim da lista
+
+hash(): retorna o valor em hash de um objeto
+texto = "python"
+numero = 42
+
+print(hash(texto))   # Saída: um número inteiro (varia em cada execução)
+print(hash(numero))  # Saída: 42 (inteiros retornam eles mesmos como hash)
+
+open(): permite trabalhar com arquivos
+# Cria e escreve no arquivo
+arquivo = open("exemplo.txt", "w")
+arquivo.write("Olá, mundo!\n")
+arquivo.write("Escrevendo no arquivo.")
+arquivo.close()
