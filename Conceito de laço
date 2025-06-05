@@ -1,0 +1,114 @@
+#Lógica do while
+a=1
+while a < 10: #a entra no laço e não para de rodar
+    print ("Teste")
+    a = a+1 #vai dar 9 voltas = vai aparecer 9 teste; 1a volta=1, 2a volta=2...
+#laço encerra a execução quando while for falso
+
+#1
+#for
+for a in range(5)
+    print("marcio") #imprime marcio 5 vezes
+
+#2
+a = ["juliana", "leticia", "marcia"] #recebe uma lista
+#geralmente coloca-se um laço de repetição, ou seja um input pra inserir nomes 
+
+for a in a:
+    print(a)
+
+#3
+a= "Juliana" #pra cada volta do laço uma linha
+
+for a in a:
+    print(a)
+
+# lista
+a=[]
+b=1
+print(a)
+while b<=3:
+  a.append(input("Digite o nome do aluno: "))
+  b = b + 1
+print(a)
+
+#resultado
+Digite o nome do alunojuliana
+Digite o nome do alunobruna
+Digite o nome do alunoalice
+['juliana', 'bruna', 'alice']
+
+#posição 
+a = ["juliana", "leticia"]
+print(a[1]) #posição 0= juliana, posição 1= leticia
+
+#inserindo e removendo dados em lista
+a = ["juliana", "leticia"]
+a.insert(1, "marcia")
+print(a) 
+a.remove("leticia")
+print (a)
+#resultado
+['juliana', 'marcia', 'leticia']
+['juliana', 'marcia']
+
+#DESAFIO
+#desenolvendo algoritmo
+#diretor cadastra alunos com os dados:
+# - nome, cpf, email, matricula
+#pra cada aluno cadastrado, o diretor pode lançar 3 notas
+#se a média atingida for maior ou igual a 6, escrever: "aluno x, aprovado". seu diploma terá todos os dados do aluno
+#se nao atingir a média, o sistema pede uma 4 nota, tirar nova média. se nao atingir 6, reprovado
+
+nomes = []
+cpfs = []
+emails = []
+matriculas = []
+
+qtd_alunos = int(input("Quantos alunos deseja cadastrar? "))
+
+# Cadastro dos alunos
+for i in range(qtd_alunos):
+    
+    nome = input("Digite o nome do aluno: ")
+    cpf = input("Digite o CPF do aluno: ")
+    email = input("Digite o email do aluno: ")
+    matricula = input("Digite a matrícula do aluno: ")
+
+    nomes.append(nome)
+    cpfs.append(cpf)
+    emails.append(email)
+    matriculas.append(matricula)
+       # Cadastro das 3 primeiras notas
+    notas = []
+    for j in range(1, 4):
+        nota = float(input(f"Digite a {j}ª nota do aluno {nome}: "))
+        notas.append(nota)
+
+    media = sum(notas) / 3
+
+    # Verificação da média
+    if media >= 6:
+        print(f"\nAluno {nome} APROVADO com média {media:.2f}!")
+        print("=== DIPLOMA ===")
+        print(f"Nome: {nome}")
+        print(f"CPF: {cpf}")
+        print(f"Email: {email}")
+        print(f"Matrícula: {matricula}")
+        print("================\n")
+    else:
+        print(f"\nAluno {nome} ficou com média {media:.2f}. Será necessário lançar a 4ª nota.")
+        nota4 = float(input(f"Digite a 4ª nota do aluno {nome}: "))
+        nova_media = (sum(notas) + nota4) / 4
+
+        if nova_media >= 6:
+            print(f"\nAluno {nome} APROVADO com média {nova_media:.2f}!")
+            print("=== DIPLOMA ===")
+            print(f"Nome: {nome}")
+            print(f"CPF: {cpf}")
+            print(f"Email: {email}")
+            print(f"Matrícula: {matricula}")
+            print("================\n")
+        else:
+            print(f"\nAluno {nome} REPROVADO com média {nova_media:.2f}.\n")
+
