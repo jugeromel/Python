@@ -1,0 +1,49 @@
+#tuplas é similar a listas -> tupla é imutável
+a= (1,2,3) #pode haver valores textuais string
+print(a[0]) #mostra o valor da posição 1, neste caso=1
+
+
+#2
+tupla = (1,2,3,4,5,6,7,8,9,10)
+if 18 in tupla:
+  print ("existe")
+else:
+  print("não existe")
+
+
+#listas versus tuplas
+#tuplas são imutáveis, lista não.
+#tuplas utilizam parenteses, listas utilizam colchetes
+
+#lista
+a=[1,2,3]
+print(a[0])
+a.append(5) #acrescenta valor na lista a
+print(a)
+
+#remove e insert
+a =[1,2,3]
+a.remove(1)
+print (a)
+a.insert(0,50)
+print(a)
+
+#conjuntos
+#a lógica é a mesma às listas e tuplas, mas não existe elementos repetidos, pode ate haver, mas nao vai aparecer o valor repetitivo
+
+a= {1,2,2,3,3,4,4,4,5}
+print(a)
+#resultado
+{1,2,3,4}
+
+#interseção conjuntos
+a={1,2,2,3,3,4,4,4,5}
+b={1,2,2}
+c= a.intersection(b)
+print(c)
+
+
+#conceito de dicionários
+# se comportam da mesma forma que uma lista ou tupla, tem estrutura do tipo vetor
+cadastro ={ "nome" : "João", "sobrenome": "Silva", "idade": 34, "RG": "0000000"}
+print(cadastro["sobrenome"])
