@@ -1,0 +1,38 @@
+# Programação orientada a objetos (POO): Conceitos avançados
+# cria um molde, estrutura padrão que é replicado para a informação a ser adicionada
+#reaproveitamento de código
+
+class Pessoa:
+    nome= "" #atributos = variáveis
+    idade = 0
+
+    #método = função
+    def exibir(self, a, b, c):  #primeiro parametro é sempre self = utilizando algp da propria classe 
+        print(a,b,c)
+
+        #use o valor da própria classe
+    def exibir(self):
+        print(self.nome) # puxa da linha 2
+
+from Pessoa import Pessoa  # type: ignore
+
+pessoa = Pessoa()
+print(pessoa.nome)
+print (pessoa.idade)
+pessoa.exibir("paulo", 38)
+
+# Getter e Setter
+
+@property  #muda a estrutura padrão
+def nome(self):
+    return self._nome
+
+#alterar vaslores = setters
+@nome.setter
+def nome(self, nome):
+    self._nome = nome 
+
+# Encapsulamento
+#encapsulamento = bonecas russas
+_nome => nao pode alterar
+__nome => dois _ nivel de proteção maior
